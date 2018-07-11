@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_07_11_200512) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "assets", force: :cascade do |t|
     t.string "name"
     t.integer "price"
@@ -23,7 +26,7 @@ ActiveRecord::Schema.define(version: 2018_07_11_200512) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.integer "asset_id", default: 0
+    t.integer "asset_id", default: [], array: true
     t.integer "profile_id"
     t.integer "invested_amount"
     t.integer "last_price"

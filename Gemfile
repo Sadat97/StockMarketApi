@@ -8,9 +8,9 @@ gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 #group :development ,
 
-group :production do
-gem 'pg', '~> 0.18.4'
-end
+
+gem 'pg'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -33,7 +33,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # gem 'rack-cors'
 
 group :development, :test do
-gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
+#gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
